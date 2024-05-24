@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const phoneNumber = localStorage.getItem('phoneNumber');
     const password = localStorage.getItem('password');
 
     document.getElementById('phoneNumber').textContent = phoneNumber;
+    document.getElementById('password').textContent = password;
 
-    const passwordSpan = document.getElementById('password');
-    passwordSpan.textContent = password; // Используем textContent для span
-
-    document.getElementById('logoutBtn').addEventListener('click', () => {
+    document.getElementById('logoutBtn').addEventListener('click', function() {
         localStorage.removeItem('phoneNumber');
         localStorage.removeItem('password');
-        window.location.href = 'Reg.html';
+        window.location.href = 'Reg.html'; // Перенаправляем на страницу входа или регистрации
     });
 });

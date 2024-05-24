@@ -1,33 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const passwordInput = document.getElementById('password');
-    const showPasswordButton = document.getElementById('showPassword');
-
-    showPasswordButton.addEventListener('click', function() {
-        if (passwordInput.type === 'password') {
-            passwordInput.type = 'text';
-        } else {
-            passwordInput.type = 'password';
-        }
-    });
-
-    // Объект с тестовыми данными пользователей
-    const users = {
-        '79512735793': 'password123'
-        // Другие пользователи могут быть добавлены сюда
-    };
 
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
         const phoneNumber = document.getElementById('phone').value;
-        const password = document.getElementById('password').value;
+        const password = passwordInput.value; // Получаем значение пароля из поля ввода
 
-        // Проверка введенных данных с тестовыми данными
-        if (users[phoneNumber] === password) {
+        // Получаем пароль из localStorage по номеру телефона
+        const storedPassword = localStorage.getItem(phoneNumber);
+
+        // Проверка введенных данных с данными из localStorage
+        if (storedPassword && storedPassword === password) {
             localStorage.setItem('phoneNumber', phoneNumber);
             localStorage.setItem('password', password);
 
-            window.location.href = 'Acc.html';
+            window.location.href = 'Acc.html'; // Переходим на страницу личного кабинета
         } else {
             alert('Неправильный номер телефона или пароль. Попробуйте снова.');
         }
