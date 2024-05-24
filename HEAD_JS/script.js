@@ -1,3 +1,5 @@
+//перелистывание
+
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('.movable');
 
@@ -19,13 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const loginBtn = document.getElementById('loginBtn');
-
-    loginBtn.addEventListener('click', () => {
-        window.location.href = '../Register/Reg.html';
-    });
-});
+//скрпиты для перехода на страницы
 
 document.addEventListener('DOMContentLoaded', () => {
     const transitionOne = document.getElementById('man');
@@ -59,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+loginBtn.addEventListener('click', () => {
+    window.location.href = '../Account/Reg.html';
+});
+
+//скроллинг
+
 document.addEventListener('DOMContentLoaded', () => {
     const loginBtn = document.getElementById('loginBtn');
     const scrollContainer = document.querySelector('.scroll-container');
@@ -75,11 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollRight.classList.remove('hidden');
         }
     };
-
-    loginBtn.addEventListener('click', () => {
-        window.location.href = '../Register/Reg.html';
-    });
-
     scrollLeft.addEventListener('click', () => {
         scrollContainer.scrollBy({
             left: -scrollContainer.clientWidth,
@@ -93,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+//поиск
 
 document.getElementById('searchInput').addEventListener('input', function() {
         const filter = this.value.toLowerCase();
@@ -110,5 +109,5 @@ document.getElementById('searchInput').addEventListener('input', function() {
         updateScrollButtons();
     });
 
-    updateScrollButtons(); // Initial check on page load
+    updateScrollButtons(); 
 });

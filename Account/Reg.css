@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px;
+}
+form {
+    width: 100%;
+    max-width: 300px;
+}
+form input {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+form button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+form button:hover {
+    background-color: #555;
+}
+.container p {
+    margin-top: 30px;
+}
+.container a {
+    color: #333;
+    text-decoration: none;
+}
+.container a:hover {
+    text-decoration: underline;
+}
+
+.show-password {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
