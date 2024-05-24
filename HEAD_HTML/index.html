@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Touch</title>
+    <link rel="stylesheet" href="../HEAD_CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"> STYLISH TOUCH </div>
+        <p id="country"></p>
+        <div class="auth-buttons"> 
+            <button id="loginBtn">Войти</button>
+        </div>
+    </header>
+
+    <script>
+        fetch('https://ipinfo.io/json?token=a40603fdef47c5')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('country').textContent = `Вы зашли из страны: ${data.country}`;
+            })
+            .catch(error => console.error('Ошибка получения данных:', error));
+    </script>
+
+    <main>
+        <div class="product" id="man">
+            <div class="button-container">
+                <a href="/SECOND_HTML_MAN/Jeans.html" class="product-button">Джинсы</a>
+                <a href="/SECOND_HTML_MAN/T-Shirts.html" class="product-button">Футболки</a>
+                <a href="/SECOND_HTML_MAN/Sneakers.html" class="product-button">Кроссовки</a>
+            </div>
+            <h2><img src="../Images/ManHead.jpg" width="380" height="380" class="movable"> Мужчинам</h2>
+        </div>
+        <div class="product" id="woman">
+            <div class="button-container">
+                <a href="jeans.html" class="product-button">Платья</a>
+                <a href="tshirts.html" class="product-button">Сумки</a>
+                <a href="sneakers.html" class="product-button">Туфли</a>
+            </div>
+            <h2><img src="../Images/WomanHead.jpg" width="380" height="380" class="movable"> Женщинам</h2>
+        </div>
+        <div class="product" id="kids">
+            <div class="button-container">
+                <a href="jeans.html" class="product-button">Мальчикам</a>
+                <a href="tshirts.html" class="product-button">Девочкам</a>
+            </div>
+            <h2><img src="../Images/KidsHead.jpg" width="380" height="380" class="movable"> Детям</h2>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Логинов К. </p>
+    </footer>
+
+    <script src="../HEAD_JS/script.js"></script>
+</body>
+</html>

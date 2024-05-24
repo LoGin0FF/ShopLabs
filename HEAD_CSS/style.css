@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(186, 192, 182);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    gap: 100px;
+    padding: 18.5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#man {
+    background-color: rgb(153, 205, 255);
+}
+
+#woman {
+    background-color: rgb(255, 203, 203);
+}
+
+#kids {
+    background-color: rgb(204, 204, 254);
+}
+
+.product {
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: transform 0.2s ease;
+}
+
+.product:hover .button-container {
+    display: flex;
+}
+
+.button-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.product-button {
+    color: rgb(48, 48, 48);
+    font-size: 17px;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: rgb(48, 48, 48);
+    color: #fff;
+}
+
+.product img {
+    transition: transform 0.2s ease;
+}
+
+.product h2 {
+    margin-top: 10px;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4CAF50;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.auth-buttons button:hover {
+    background-color: #45a049;
+}
+
+#price {
+    color: rgb(60, 148, 102);
+    font-size: 25px;
+    margin-top: 0;
+}
