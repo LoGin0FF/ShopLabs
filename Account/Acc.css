@@ -1,0 +1,65 @@
+/* Основные стили для страницы личного кабинета */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    padding: 100px;
+    text-align: left; /* Выровнять текст по левому краю */
+}
+
+.container h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#cartItems {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#cartItems table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cartItems th, #cartItems td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#logoutBtn, #checkoutBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#logoutBtn:hover, #checkoutBtn:hover {
+    background-color: #555;
+}
+
+footer {
+    display: none;
+}
+
+span {
+    font-weight: bold;
+}

@@ -6,7 +6,11 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: rgb(186, 192, 182);
+    /* background-color: rgb(186, 192, 182); */
+
+    background-image: url('../Images/Head.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 header {

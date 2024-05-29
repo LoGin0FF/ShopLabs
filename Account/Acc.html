@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Личный кабинет</title>
     <link rel="stylesheet" href="../HEAD_CSS/style.css">
+    <link rel="stylesheet" href="Acc.css">
     <script src="../HEAD_JS/script.js" defer></script>
 </head>
+
 <body>
     <header>
         <div class="logo" id="logo">STYLISH TOUCH</div>
@@ -17,7 +20,36 @@
             <p>Номер телефона: <span id="phoneNumber"></span></p>
             <p>Пароль: <span id="password"></span></p>
             <h2>Корзина</h2>
-            <div id="cartItems"></div>
+            <div id="cartItems">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Товар</th>
+                            <th>Кол-во</th>
+                            <th>Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Кроосовки Nike</td>
+                            <td>1</td>
+                            <td>7500</td>
+                        </tr>
+                        <tr>
+                            <td>Кепка бежевая</td>
+                            <td>2</td>
+                            <td>1200 * 2</td>
+                        </tr>
+                        <tr>
+                            <td>Футболка с карманом</td>
+                            <td>1</td>
+                            <td>1200</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Общая сумма: 11100 р.</p>
+                <button id="checkoutBtn">Оформить заказ</button>
+            </div>
             <button id="logoutBtn">Выйти из аккаунта</button>
         </div>
     </main>
@@ -26,4 +58,5 @@
     </footer>
     <script src="acc.js"></script>
 </body>
+
 </html>
