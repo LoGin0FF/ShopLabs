@@ -98,6 +98,7 @@ main {
 
 .product h2 {
     margin-top: 10px;
+    font-size: 20px;
 }
 
 footer {
@@ -133,7 +134,7 @@ footer {
 }
 
 .price {
-    color: rgb(60, 148, 102);
+    color: rgb(2, 193, 123);
     font-size: 25px;
     margin-top: 0;
 }
