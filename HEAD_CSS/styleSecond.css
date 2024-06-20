@@ -142,3 +142,27 @@ footer {
 .hidden {
     display: none;
 }
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price {
+    color: rgb(2, 193, 123);
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 30px; /* Расстояние между ценой и кнопкой */
+}
+
+.cart-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-shopping-cart {
+    font-size: 20px; /* Размер иконки */
+    color: #333; /* Цвет иконки */
+}

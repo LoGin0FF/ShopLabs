@@ -111,3 +111,14 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
     updateScrollButtons(); 
 });
+
+// Получаем все кнопки корзины
+const cartButtons = document.querySelectorAll('.cart-button');
+
+// Обработчик нажатия на кнопку корзины
+cartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productName = button.parentElement.querySelector('h3').textContent;
+        alert(`Товар успешно добавлен в корзину!`);
+    });
+});

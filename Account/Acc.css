@@ -63,3 +63,17 @@ footer {
 span {
     font-weight: bold;
 }
+
+.edit-button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Добавляет немного отступа между кнопками и текстом */
+    font-weight: bold;
+}
+
+.edit-button:hover {
+    background-color: #555;
+}
