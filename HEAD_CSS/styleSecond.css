@@ -166,3 +166,22 @@ footer {
     font-size: 20px; /* Размер иконки */
     color: #333; /* Цвет иконки */
 }
+
+.notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: none; /* Скрыто по умолчанию */
+    text-align: center;
+    font-size: 18px;
+}
+
+.notification.show {
+    display: block; /* Показать уведомление */
+}

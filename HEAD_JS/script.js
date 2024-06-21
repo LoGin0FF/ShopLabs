@@ -39,13 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const transitionOne = document.getElementById('kids');
-
-    transitionOne.addEventListener('click', () => {
-        window.location.href = 'KidsClothes.html';
-    });
-});
 
 document.addEventListener('DOMContentLoaded', () => {
     const transitionOne = document.getElementById('logo');
@@ -112,13 +105,42 @@ document.getElementById('searchInput').addEventListener('input', function() {
     updateScrollButtons(); 
 });
 
-// Получаем все кнопки корзины
-const cartButtons = document.querySelectorAll('.cart-button');
+document.addEventListener('DOMContentLoaded', function () {
+    const cartButtons = document.querySelectorAll('.cart-button');
+    const notification = document.getElementById('notification');
 
-// Обработчик нажатия на кнопку корзины
-cartButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const productName = button.parentElement.querySelector('h3').textContent;
-        alert(`Товар успешно добавлен в корзину!`);
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            showNotification();
+        });
+    });
+
+    function showNotification() {
+        notification.classList.add('show');
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 1500); // Показывает уведомление на 2 секунды
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const notification = document.getElementById('customNotification');
+
+    function showNotification(message) {
+        notification.textContent = message;
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 1000);
+    }
+
+    // Ссылки, которые показывают уведомление
+    const links = document.querySelectorAll('#kids');
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            showNotification('Пока в разработке...');
+        });
     });
 });
+
