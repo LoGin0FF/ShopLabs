@@ -77,3 +77,25 @@ span {
 .edit-button:hover {
     background-color: #555;
 }
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Выровнять по центру горизонтально */
+    gap: 120px; /* Расстояние между кнопкой и заголовком */
+    margin-top: 20px; /* Добавить отступ сверху */
+}
+
+.order-history-button {
+    padding: 10px 20px;
+    background-color: rgb(6, 116, 133);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.order-history-button:hover {
+    background-color: rgb(86, 189, 187);
+}
